@@ -63,6 +63,15 @@ class Song
     new_song.artist_name = song_file[0]
     new_song
   end
+
+  def self.create_from_filename(song_file)
+    self.all << self.new_from_filename(song_file)
+    # binding.pry
+  end
+
+  def self.destroy_all
+    self.all.clear
+  end
 end
 
 
